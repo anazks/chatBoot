@@ -47,6 +47,7 @@ function ChatBoot() {
         setIsTyping(true); // Show typing animation
         const response = await Axios.get('/get-allCategory');
         if (response.data && Array.isArray(response.data)) {
+          console.log(response.data)
           setCategories(response.data);
         }
         setIsTyping(false); // Hide typing animation
@@ -199,6 +200,11 @@ function ChatBoot() {
               className="category-button"
             >
               {category.name}
+              {category.Subname ? <>
+                <button style={{color:"black",border:'1px solid black'}}>
+                  {category.Subname}
+                </button>
+              </> : ""}
             </button>
           ))}
         </div>

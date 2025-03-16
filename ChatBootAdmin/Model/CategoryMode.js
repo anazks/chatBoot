@@ -8,6 +8,12 @@ const categorySchema = new mongoose.Schema(
       required: [true, 'Category name is required'],
       trim: true,
       unique: true, // Ensures each category is unique
+    },
+    Subname:{
+      type: String,
+      required: [true, 'SubCategory name is required'],
+      trim: true,
+      unique: true, // Ensures each category is unique
     }
   },
   {

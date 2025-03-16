@@ -18,6 +18,11 @@ const questionSchema = new mongoose.Schema(
       required: [true, 'Category is required'],
       trim: true,
     },
+    Subcategory: {
+      type: String,
+      required: [true, 'Category is required'],
+      trim: true,
+    },
   },
   {
     timestamps: true, // Adds createdAt and updatedAt fields
